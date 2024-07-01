@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: relative;
+        bottom: 2px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="bg"></div>
+      <div class="top">
+        <div class="todo">
+          <div class="h1">
+            <h1>TODO</h1>
+          </div>
+          <div class="mode">
+            <img src="./images/icon-moon.svg" alt="" height="20px"/>
+          </div>
+        </div>
+        <div class="newTodo">
+          <input type="checkbox" id="roundCheckbox" class="round-checkbox"/>
+          <input type="text" id="textInput" name="textInput" placeholder="Create a new todo..." />
+        </div>
+        <div class="list">
+          <div class="form">
+          </div>
+          <div class="summary">
+            <div class="left">0 items left</div>
+            <div class="filter">
+              <span class=" type selected">All</span>
+              <span class="type">Active</span>
+              <span class="type">Completed</span>
+            </div>
+            <div class="clear">Clear Completed</div>
+          </div>
+        </div>
+        <div class="drag">
+          Drag and drop to reorder list
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Vaishali</a>.
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

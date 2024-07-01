@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --BrightBlue: hsl(220, 98%, 61%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --DarkGrayishBlueL: hsl(236, 9%, 61%);
+    --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+    /* dark */
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBlueHover: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue1: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background-color: var(--VeryLightGray);
+}
+
+main{
+    height: 96vh;
+}
+
+.bg{
+    height: 45%;
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    width: 36vw;
+    position: relative;
+    bottom: 170px;
+}
+
+.todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: white;
+}
+
+.newTodo{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    height: 51px;
+    border-radius: 5px;
+    gap: 20px;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--DarkGrayishBlue);
+    cursor: pointer;
+}
+
+#textInput{
+    height: 27px;
+    width: 50%;
+    border: none;
+    font-size: 21px;
+}
+
+input[type="text"]:focus{
+    outline: none;
+    border: none;
+    caret-color: var(--BrightBlue);
+    color: var(--VeryDarkDesaturatedBlue);
+}
+
+.list{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    height: 51px;
+    gap: 20px;
+    font-size: 18px;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+label >p{
+    width: 80%;
+}
+
+.line{
+    display: flex;
+    background-color: var(--DarkGrayishBlueL);
+    height: 1px;
+    width: 100%;
+}
+
+.pCompleted{
+    text-decoration: line-through;
+    color: var(--LightGrayishBlue);
+}
+
+.pCompletedDark{
+    text-decoration: line-through;
+    color: var(--VeryDarkGrayishBlue1);
+}
+
+.completed{
+    background: linear-gradient(to right bottom,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.summary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    color: var(--DarkGrayishBlueL);
+    padding: 0 10px;
+}
+
+.summary *{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: rgb(147, 148, 165);
+}
+
+.selected{
+    color: var(--BrightBlue);
+}
+
+.left:hover , .clear:hover{
+    color: var(--VeryDarkGrayishBlue1);
+    cursor: pointer;
+}
+
+.type:hover{
+    color: var(--VeryDarkGrayishBlue2);
+    cursor: pointer;
+}
+
+.selected:hover{
+    color: var(--BrightBlue); 
+}
+
+.drag{
+    margin-top: 15px;
+    text-align: center;
+    color: var(--DarkGrayishBlue);
+    font-size: 14px;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+.inCheck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check{
+    position: absolute;
+}
+
+
+@media screen and (max-width:800px) {
+    .top{
+        width: 85vw;
+    }
+
+    .filter{
+        position: absolute;
+        bottom: -23px;
+        width: 100%;
+        justify-content: center;
+        background-color: white;
+        align-items: center;
+        height: 51px;
+        border-radius: 5px;
+        gap: 20px;
+    }
+
+    .drag{
+        position: relative;
+        bottom: -50px;
+    }
+}
